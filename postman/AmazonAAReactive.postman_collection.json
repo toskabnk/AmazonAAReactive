@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "fd05183d-7142-4f9d-8ec9-ce9e50530b62",
+		"name": "AmazonAAReactive",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24042828"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_url}}/products",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "products/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_url}}/products/64527d7c37b2ad026c213506",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"products",
+								"64527d7c37b2ad026c213506"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "products?name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_url}}/products?name=Papel",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Papel"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "products?category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_url}}/products?category=Test",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "Test"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "products?description",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_url}}/products?description=Test",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "description",
+									"value": "Test"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "products",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Martillo\",\r\n    \"description\":\"Test\",\r\n    \"price\":1.0,\r\n    \"category\":\"Test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/products",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "products/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Papel modificado\",\r\n    \"description\":\"Modificado\",\r\n    \"price\":888.0,\r\n    \"category\":\"Modificado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/products/64527d6537b2ad026c213505",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"products",
+								"64527d6537b2ad026c213505"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "products",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/products/64527d8d37b2ad026c213509",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"products",
+								"64527d8d37b2ad026c213509"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "server_url",
+			"value": "localhost:8080",
+			"type": "string"
+		}
+	]
+}
